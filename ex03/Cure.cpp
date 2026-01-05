@@ -1,0 +1,21 @@
+#include "Cure.hpp"
+#include "Character.hpp"
+#include <iostream>
+
+Cure::Cure() : AMateria("cure") {}
+
+Cure::Cure(const Cure & src) : AMateria(src) {}
+
+Cure::~Cure() {}
+
+Cure & Cure::operator=(const Cure & src) {
+    if (this == &src)
+    {
+        return *this;
+    }
+    return *this;
+}
+
+AMateria* Cure::clone() const { return new Cure(*this); }
+
+void Cure::use(ICharacter& target) { std::cout << "* cura os ferimentos de  " << target.getName() << " *" << std::endl; }
