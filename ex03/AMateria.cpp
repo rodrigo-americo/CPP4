@@ -7,7 +7,7 @@ AMateria::AMateria(const AMateria & src) : type(src.type) {}
 
 AMateria::~AMateria() {}
 
-AMateria & AMateria::operator=(const AMateria &) { std::cout << "Função desabilitada" << std::endl; return *this;}
+AMateria & AMateria::operator=(const AMateria &) { std::cout << " Function disabled " << std::endl; return *this;}
 
 std::string const & AMateria::getType() const { return type; }
 

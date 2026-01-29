@@ -1,7 +1,13 @@
 #include "Character.hpp"
 #include "AMateria.hpp"
 
-Character::Character() : name("") {}
+Character::Character() : name("") 
+{
+	for (int i = 0; i < 4; i++)
+    {
+        inventory[i] = NULL;
+    }
+}
 
 Character::Character(std::string const & name) : name(name)
 {
