@@ -16,6 +16,7 @@ Dog::Dog(const Dog &src) : Animal(src)
 
 Dog::Dog(const std::string &type) : Animal(type)
 {
+	brain = new Brain();
     std::cout << "Dog constructor " << type << " called" << std::endl;
 }
 
